@@ -52,10 +52,10 @@ path() {
             path
     esac
 
-    if [ "$paths" == 1];
+    if [ "$paths" == 1 ];
         then
             read -p "INSERT YOUR DESIRE PATH ~> " pathss
-            #clear
+            clear
 
             if [ "$mains" == 1 ];
                 then
@@ -141,7 +141,7 @@ back() {
     echo "| 1. |    | YES  |"
     echo "| 2. |    | NO   |"
     echo "------------------"
-    read -p "INSERT YOUR ANSWER HERE! ~> " bakcs
+    read -p "INSERT YOUR ANSWER HERE! ~> " backs
     clear
 
     case "$backs"
@@ -150,10 +150,10 @@ back() {
             back
     esac
 
-    if [ "$backs" = 1 ];
+    if [ "$backs" == 1 ];
         then
             main
-    elif [ "backs" = 2];
+    elif [ "$backs" == 2 ];
         then
             quit
     fi
@@ -165,6 +165,7 @@ quit() {
     echo "| THANK YOU FOR USING THIS SCRIPT |"
     echo "|  SCRIPT BY DIMAS YUDHA PRATAMA  |"
     echo "==================================="
+    exit
 }
 
 main() {
@@ -194,13 +195,13 @@ main() {
             convert 1
             proc
             back
-    elif [ "$mains" == 2];
+    elif [ "$mains" == 2 ];
         then
             path
             convert 2
             proc
             back
-    elif [ "$mains" == 3];
+    elif [ "$mains" == 3 ];
         then
             quit
     fi
